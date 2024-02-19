@@ -1,4 +1,6 @@
 # Vet-U
+Won BuildDSM V1 Hackathon for Best Pitch
+
 Vet-U is designed to help pet owners diagnose what is wrong with their pets, reducing the need for visits to the vet.
 Utilized RoboFlow and OpenAI APIs to handle object recognition to identify signs of illnesses, integrating GPT Wrappers to form an approximate diagnosis and treatment. 
 
