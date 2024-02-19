@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Symptoms Form</h1>
+    <h3>Please fill out to the greatest extent that you can</h3>
+    <h3>Answers should be based on current conditions unless specified</h3>
+    <h3>The more descriptive you are, the more accurate diagnosis</h3>
+    <h3>If the question is not applicable, please put "none"</h3>
+    <br>
+
+    <form action="{{ url_for('to_file')}}" method="POST">
+
+    <div>
+        <label for="breed">Breed: </label>
+        <br>
+        <input name="breed" type="text">
+    </div>
+    <br>
+    <div>
+        <label for="color">Color: </label>
+        <br>
+        <input name="color" type="text">
+        </div>
+    <br>
+    <div>
+        <label for="size">Size Standing (inches): </label>
+        <br>
+        <label> 4 <input name="size" type="range" min="4" max="100" value="20"> 100</label>
+    </div>
+    <br>
+    <div>
+        <label for="temperament">Temperament: </label>
+        <br>
+        <input name="temperament" type="text" required>
+    </div>
+    <br>
+    <div>
+        <script>
+            function ChangeWeight() {
+                document.getElementByname("output").textContent = document.getElementByname("weight").value + "lbs";
+            }
+        </script>
+        <label for="weight">Weight (lbs): </label>
+        <br>
+        <label>2 <input  id="weight" name="weight" type="range" min="2" max="200" step="3" value="40" oninput="ChangeWeight()"> 200</label>
+        <br>
+        <label id="weight" name="output">40lbs</label>
+    </div>
+    <br>
+    <div>
+        <label for="energy_level">Energy Level: </label>
+        <br>
+        <label>Sedentary <input name="energy_level" type="range" min="1" max="5" value="3"> Athlete</label>
+    </div>
+    <br>
+    <div>
+        <label for="heart_rate">Heart Rate: </label>
+        <br>
+        <label>Lower <input name="heart_rate" type="range" min="1" max="3" value="2"> Higher</label>
+        <br>
+        <label><input type="checkbox" name="heart_checkbox">Not sure</label>
+    </div>
+    <br>
+    <div>
+        <label for="respiratory_rate">Respiratory Rate: </label>
+        <br>
+        <label>Lower <input name="respiratory_rate" type="range" min="1" max="3" value="2"> Higher</label>
+        <br>
+        <label><input type="checkbox" name="respiratory_checkbox">Not sure</label>
+    </div>
+    <br>
+    <div>
+        <label for="body_temperature">Temperature: </label>
+        <br>
+        <label>Lower <input name="body_temperature" type="range" min="1" max="3" value="2"> Higher</label>
+        <br>
+        <label><input type="checkbox" name="temperature_checkbox">Not sure</label>
+    </div>
+    <br>
+    <div>
+        <label for="coat_condition">Coat Condition: </label>
+        <br>
+        <input name="coat_condition" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="mobility">Manuverability: </label>
+        <br>
+        <input name="mobility" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="appetite">Appetite: </label>
+        <br>
+        <input name="appetite" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="thirst">Thirst: </label>
+        <br>
+        <input name="thirst" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="behavioral_changes">Behavior Change: </label>
+        <br>
+        <input name="behavioral_changes" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="eyes">Eye Symptoms: </label>
+        <br>
+        <input name="eyes" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="ears">Ears Symptoms: </label>
+        <br>
+        <input name="ears" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="urination">Urination Symptoms: </label>
+        <br>
+        <input name="urination" type="text" required>
+    </div>
+    <br>
+    <div>
+        <label for="defecation">Defecation Symptoms: </label>
+        <br>
+        <input name="defecation" type="text" required>
+    </div>
+    <br>
+    
+    <input name="submit" type="submit">
+
+</form>
+
+
+</body>
+</html>
